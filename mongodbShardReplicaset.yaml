@@ -103,7 +103,7 @@ spec:
               memory: "16Gi"
           args:
           - -cpus
-          - 4
+          - "4"
             
   volumeClaimTemplates:
   - metadata:
