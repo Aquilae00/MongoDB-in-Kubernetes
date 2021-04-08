@@ -97,6 +97,9 @@ spec:
             periodSeconds: 20
             timeoutSeconds: 120
             failureThreshold: 6
+          resources:
+            requests:
+              cpu: "2"
   volumeClaimTemplates:
   - metadata:
       name: mongodbshardpvc
