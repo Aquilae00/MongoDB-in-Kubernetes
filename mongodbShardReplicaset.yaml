@@ -99,11 +99,11 @@ spec:
             failureThreshold: 6
           resources:
             requests:
-              cpu: "2"
-              memory: "5Gi"
+              cpu: "6"
+              memory: "8Gi"
           args:
           - -cpus
-          - "2"
+          - "6"
   volumeClaimTemplates:
   - metadata:
       name: mongodbshardpvc
@@ -112,16 +112,5 @@ spec:
       storageClassName: standard
       resources:
         requests:
-          storage: 5Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mongodbshardvolume
-spec:
-  resources:
-    requests:
-      storage: 200Mi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
+          storage: 10Gi
+
