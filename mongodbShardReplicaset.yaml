@@ -116,13 +116,13 @@ spec:
           storage: 5Gi
 ---
 apiVersion: v1
-kind: PersistentVolume
+kind: PersistentVolumeClaim
 metadata:
   name: mongodbshardvolume
-  labels:
-    type: local
 spec:
-  capacity:
-    storage: 200Mi
+  resources:
+    requests:
+      storage: 200Mi
   accessModes:
     - ReadWriteOnce
+  storageClassName: standard
