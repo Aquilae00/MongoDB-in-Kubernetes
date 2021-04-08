@@ -115,7 +115,7 @@ spec:
           storage: 5Gi
 ---
 apiVersion: v1
-kind: PersistentVolume
+kind: PersistentVolumeClaim
 metadata:
   name: mongodbshardvolume
 spec:
