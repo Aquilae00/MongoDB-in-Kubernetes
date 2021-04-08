@@ -104,16 +104,12 @@ spec:
           args:
           - -cpus
           - "2"
-            
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mongodbshardpvc
-spec:
-  resources:
-    requests:
-      storage: 200Mi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
+  volumeClaimTemplates:
+  - metadata:
+      name: mongodbshardpvc
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: standard
+      resources:
+        requests:
+          storage: 5Gi
