@@ -109,7 +109,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodbshardvolume
+  name: mongodbshardpvc
 spec:
   resources:
     requests:
