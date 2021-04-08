@@ -99,11 +99,11 @@ spec:
             failureThreshold: 6
           resources:
             requests:
-              cpu: "4"
-              memory: "16Gi"
+              cpu: "8"
+              memory: "32Gi"
           args:
           - -cpus
-          - "4"
+          - "8"
             
   volumeClaimTemplates:
   - metadata:
